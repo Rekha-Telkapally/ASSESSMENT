@@ -23,6 +23,7 @@ public class AdminController {
 	@Autowired
 	Environment environment;
 
+	
 	@RequestMapping(value = "/adduser", method = RequestMethod.POST)
 	public String adduser(UserBean user, HttpServletRequest request) {
 		String port = environment.getProperty("local.server.port");
