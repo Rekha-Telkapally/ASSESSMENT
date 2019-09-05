@@ -59,7 +59,7 @@ public class ManagerDao implements CrudManagerInterface {
 		return 1;
 	}
 
-	// Manager to display usernames in sorted order
+	// Manager to display username's in sorted order
 	public List<String> displayuser() {
 		// TODO Auto-generated method stub
 		List<String> list = new ArrayList<>();
@@ -91,7 +91,7 @@ public class ManagerDao implements CrudManagerInterface {
 		return 0;
 	}
 
-	// Manager gets a list of admins or managers under him who have applied leave
+	// Manager gets a list of admin's or managers under him who have applied leave
 	@Override
 	public List<LeaveBean> grantleave(LeaveBean leave) {
 		List<LeaveBean> employees = crud.grantLeave(leave.getManagerid());

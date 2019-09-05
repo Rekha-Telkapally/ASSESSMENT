@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body style="background-color: #E7BE77">
+<body style="background-color: #63E1DD">
 	<table border="2" style="border: 2px solid black; width: 100%">
 		<a href="/manager.jsp">Go Back</a>
 		<%

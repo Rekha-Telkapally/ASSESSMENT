@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 </head>
-<link rel="stylesheet" type="text/css" href="Property.css" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
 <script>
 	function changeaddress() {
 		var address = document.form.userpassword.value;

@@ -5,16 +5,15 @@
 <head>
 <meta charset="ISO-8859-1">
 </head>
-<link rel="stylesheet" type="text/css" href="Property.css" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
 <body class="center">
 
 	<form action="user.jsp">
 		<h3>
-			Update Permissions will only be given to you,when you complete 100
-			days after being added by admin.<br> <br> If you have
-			logged in for the first time ,change your password first or else you
-			won't be allowed to update address
+			Update Permissions to access this will only be given to you,when you complete 100
+			days. <br> <br>
+			
 		</h3>
 		<input type="submit" class="submit" value="Back">
 	</form>

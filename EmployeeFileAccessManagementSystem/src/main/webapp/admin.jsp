@@ -5,7 +5,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="Property.css" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
 <meta charset="ISO-8859-1">
 </head>
 

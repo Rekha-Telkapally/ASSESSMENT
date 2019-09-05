@@ -24,7 +24,7 @@
 	}
 </script>
 </head>
-<link rel="stylesheet" type="text/css" href="Property.css" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
 <body>
 	<form action="managerlogin/applyleave" method="post">
 		<h3 align="center">

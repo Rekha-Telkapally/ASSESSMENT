@@ -23,7 +23,7 @@ public class ValidateDao implements CrudValidationInterface {
 	@Override
 	// Returns role after validating id and password
 	public String validatetheperson(ValidateBean validate) {
-		// TODO Auto-generated method stub
+		
 
 		Optional<ValidateBean> list = crud.findById(validate.getId());
 

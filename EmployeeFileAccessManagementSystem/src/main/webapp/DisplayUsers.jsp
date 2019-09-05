@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="Property.css" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
 </head>
 <body class="center">
 	<h2>The following is the list of Users</h2>

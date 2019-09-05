@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="Property.css" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
 <script>
 	function validLogin() {
 		var userid = document.form.userid.value;
@@ -37,7 +37,7 @@
 				<td><input type="text" name="userid"></td>
 			</tr>
 			<tr>
-				<td><label>Enter Username</label></td>
+				<td><label>Enter User name</label></td>
 				<td><input type="text" name="username"></td>
 			</tr>
 			<tr>

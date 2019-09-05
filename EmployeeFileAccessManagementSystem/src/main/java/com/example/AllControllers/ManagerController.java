@@ -1,6 +1,6 @@
 package com.example.AllControllers;
 
-/*If the person logged in is manager,the manager functionalities page(manager.jsp) 
+/*If the person logged in is manager(manager.jsp) 
  * redirects to ManagerController to perform required function*/
 import java.util.List;
 
@@ -25,10 +25,10 @@ import com.example.Bean.UserBean;
 
 @Controller
 @RequestMapping("managerlogin")
-//Controller for admin functionalities
+//Controller for admin functionalities and Calls ManagerRestController to perform admin Functionalities
 
 public class ManagerController {
-	// Calls ManagerRestController function where manager can apply leave
+	//  function where manager can apply leave
 	@Autowired
 	Environment environment;
 
@@ -43,7 +43,7 @@ public class ManagerController {
 
 	}
 
-	// Calls ManagerRestController function where manager can grant leave
+	//  function where manager can grant leave
 	@RequestMapping(value = "/grantleave")
 	public ModelAndView grantleave(HttpServletRequest request, LeaveBean leave) {
 		int managerid = (int) request.getSession().getAttribute("managerid");
@@ -62,7 +62,7 @@ public class ManagerController {
 
 	}
 
-	// Calls ManagerRestController function where manager can accept leave
+	//  function where manager can accept leave
 	@RequestMapping(value = "/acceptleave")
 	public String acceptleave(@RequestParam("status") String result, @RequestParam("id") int id,
 			HttpServletRequest request) {
@@ -76,7 +76,7 @@ public class ManagerController {
 		return "redirect:/managerlogin/grantleave";
 	}
 
-	// Calls ManagerRestController function where manager can reject leave
+	// function where manager can reject leave
 	@RequestMapping(value = "/rejectleave")
 	public String rejectleave(@RequestParam("status") String result, @RequestParam("id") int id,
 			HttpServletRequest request) {
@@ -90,7 +90,7 @@ public class ManagerController {
 		return "redirect:/managerlogin/grantleave";
 	}
 
-	// Calls MangerRestController function where manager can check the status of
+	//function where manager can check the status of
 	// leave
 	@RequestMapping(value = "/checkstatusleave")
 	public String checkstatusleave(HttpServletRequest request) {
@@ -105,7 +105,7 @@ public class ManagerController {
 		return "redirect:/displaystatusleave.jsp";
 	}
 
-	// Calls MangerRestController function to add new user
+	//  function to add new user
 	@RequestMapping(value = "/adduser", method = RequestMethod.POST)
 	public String adduser(UserBean user, HttpServletRequest request) {
 		String port = environment.getProperty("local.server.port");

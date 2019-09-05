@@ -24,7 +24,7 @@
 	}
 </script>
 </head>
-<link rel="stylesheet" type="text/css" href="Property.css" />
+<link rel="stylesheet" type="text/css" href="Style.css" />
 <body>
 	<form action="login/applyleave" method="post">
 		<h3 align="center">
@@ -49,6 +49,6 @@
 			<input type="submit" value="Submit" name="button1" class="submit" />&nbsp;&nbsp;
 		</div>
 	</form>
-	</div>
+	
 </body>
 </html>

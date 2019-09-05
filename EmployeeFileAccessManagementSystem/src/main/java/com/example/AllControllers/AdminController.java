@@ -1,6 +1,6 @@
 package com.example.AllControllers;
 
-/*If the person logged in is admin,the admin functionalities page(admin.jsp)
+/*If the person logged in as admin(admin.jsp)
  *  redirects to AdminController to perform required function*/
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -17,9 +17,9 @@ import com.example.Bean.UserBean;
 
 @Controller
 @RequestMapping(value = "login")
-//Controller for admin functionalities
+//Controller for admin functionalities and Calls AdminRestController  to perform admin functions
 public class AdminController {
-//Calls AdminRestController Function to add new user
+//Function to add new user
 	@Autowired
 	Environment environment;
 
@@ -33,7 +33,7 @@ public class AdminController {
 
 	}
 
-//Calls AdminRestController Function to delete  user
+//Function to delete  user
 	@RequestMapping(value = "/deleteuser", method = RequestMethod.POST)
 	public String deleteuser(UserBean user) {
 		String port = environment.getProperty("local.server.port");
@@ -43,7 +43,7 @@ public class AdminController {
 
 	}
 
-//Calls AdminRestController Function to display usernames in sorted order
+//to display usernames in sorted order
 	@RequestMapping(value = "/displaylist")
 	public String displaylist(HttpServletRequest request) {
 		RestTemplate rt = new RestTemplate();
@@ -54,7 +54,7 @@ public class AdminController {
 
 	}
 
-//Calls AdminRestController Function to grant update permission to users who have completed their 100 days after being added by admin
+// Function to grant update permission to users who have completed their 100 days after being added by admin
 	@RequestMapping(value = "/grantpermission")
 	public String grantpermission(HttpServletRequest request) {
 		RestTemplate rt = new RestTemplate();

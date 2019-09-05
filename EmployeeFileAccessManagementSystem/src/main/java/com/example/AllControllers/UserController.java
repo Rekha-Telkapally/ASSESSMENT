@@ -1,6 +1,6 @@
 package com.example.AllControllers;
 
-/*If the person logged in is user,the user functionalities page(user.jsp)
+/*If the person logged in is user(user.jsp)
  *  redirects to UserController to perform required function*/
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,9 +14,9 @@ import com.example.Bean.UserBean;
 
 @Controller
 @RequestMapping("login")
-//Controller for user functionalities
+//Controller for user functionalities and Calls UserRestController to perform user Functionalities
 public class UserController {
-	// Calls UserRestController Function to change address of user based on certain
+	// Function to change address of user based on certain
 	// conditions
 	@Autowired
 	Environment environment;
@@ -36,8 +36,7 @@ public class UserController {
 		}
 		return "error";
 	}
-
-	// Calls UserRestController Function to change password
+// Function to change password
 	@RequestMapping(value = "/changepassword")
 	public String changePassword(UserBean user, HttpServletRequest request) {
 		RestTemplate rt = new RestTemplate();

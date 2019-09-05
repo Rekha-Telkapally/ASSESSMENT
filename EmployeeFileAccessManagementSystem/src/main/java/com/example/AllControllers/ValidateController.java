@@ -1,7 +1,7 @@
 package com.example.AllControllers;
 
-/* This Controller validates the logged in person(user or admin or manager) by calling ValidateRestController functions and
- *  redirects accordingly*/
+/* This Controller validates the logged in person as user or admin or manager  by calling ValidateRestController functions and
+ *  continues accordingly*/
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -17,13 +17,13 @@ import com.example.Bean.ValidateBean;
 
 @Controller
 @RequestMapping(value = "login")
-//Controller For Validating
+//Controller For Validating and Calls ValidateRestController
 public class ValidateController {
 
 	@Autowired
 	Environment environment;
 	@RequestMapping(value = "/validate", method = RequestMethod.POST)
-	// Calls ValidateRestController function to validate logged in person
+	// function to validate logged in person
 	
 	public String showLoginPage(ValidateBean role, ModelMap map, HttpServletRequest request) {
 		RestTemplate rt = new RestTemplate();
@@ -41,7 +41,7 @@ public class ValidateController {
 			request.getSession().setAttribute("managerid", role.getId());
 			return "redirect:/manager.jsp";
 		}
-		request.getSession().setAttribute("errormsg", "Sorry!! you have entered a worng id or password");
+		request.getSession().setAttribute("errormsg", "Sorry!! you have entered wrong id or password");
 		return "redirect:/index.jsp";
 	}
 }

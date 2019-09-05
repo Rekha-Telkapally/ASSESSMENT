@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <html>
-<body bgcolor="#33FFBD" align="center">
+<body style="background-color:powderblue;" align="center">
 <div style="border: 6px solid black">
 <font color=" #F75D59"><h1>COMAKEIT</h1></font><br><br>
 </div>
